@@ -7,7 +7,7 @@ export class BotUpdate {
 
   private userMap = new Map<number, { model: string; time: number }>();
 
-  private genAI = new GoogleGenerativeAI("AIzaSyD0tngHJ5668MRdjBb-aW__wlEPkqZlmjA");
+  private genAI = new GoogleGenerativeAI(process.env.AI_KEY as string);
 
   private availableModels = [
     "gemini-2.5-flash",
